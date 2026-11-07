@@ -1,0 +1,18 @@
+=== COLLECTION START (UTC) ===
+2026-11-03T05:15:58Z
+=== OS & KERNEL ===
+Linux testdesktop 7.0.0-42-generic #42-Ubuntu SMP PREEMPT_DYNAMIC Thu Oct 15 08:06:44 UTC 2026 x86_64 GNU/Linux
+Distributor ID:	Ubuntu
+Description:	Ubuntu 26.04.1 LTS
+Release:	26.04
+Codename:	resolute
+=== COMPILER & TOOLS ===
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+OpenSSL 3.5.5 27 Jan 2026 (Library: OpenSSL 3.5.5 27 Jan 2026)
+TShark (Wireshark) 4.6.4.
+tcpdump version 4.99.6
+=== KERNEL SOCKET BUFFERS ===
+net.core.wmem_default = 212992
+net.core.wmem_max = 4194304
+net.ipv4.tcp_wmem = 4096	16384	4194304
+=== COLLECTION END (UTC): 2026-11-04T17:59:53Z ===

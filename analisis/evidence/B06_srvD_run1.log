@@ -1,0 +1,10 @@
+2026-11-04T04:06:18Z LISTEN 127.0.0.1:5021 maks_klien=64 maks_antrean=65536 rate=10/detik sndbuf=4096
+2026-11-04T04:06:18Z MASUK  127.0.0.1:53276 total=1
+2026-11-04T04:06:18Z DAFTAR 127.0.0.1:53276 nama=lambat
+2026-11-04T04:06:18Z MASUK  127.0.0.1:53278 total=2
+2026-11-04T04:06:18Z DAFTAR 127.0.0.1:53278 nama=probe
+2026-11-04T04:06:19Z MASUK  127.0.0.1:53290 total=3
+2026-11-04T04:06:19Z DAFTAR 127.0.0.1:53290 nama=sah
+2026-11-04T04:06:30Z PUTUS  127.0.0.1:53276 nama=lambat alasan=antrean_penuh(65536 byte)
+2026-11-04T04:06:30Z KELUAR 127.0.0.1:53276 nama=lambat alasan=penutupan paksa sisa_antrean=65455
+2026-11-04T04:06:39Z KELUAR 127.0.0.1:53278 nama=probe alasan=socket error sisa_antrean=0

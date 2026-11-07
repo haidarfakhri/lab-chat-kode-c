@@ -1,0 +1,184 @@
+2026-11-04T04:11:13Z LISTEN 127.0.0.1:5056 model=thread-per-klien
+2026-11-04T04:11:14Z MASUK  127.0.0.1:32838 slot=0
+2026-11-04T04:11:14Z DAFTAR 127.0.0.1:32838 nama=u4 slot=0
+==================
+WARNING: ThreadSanitizer: data race (pid=11120)
+  Write of size 4 at 0x5641b0250078 by main thread:
+    #0 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:212 (s5_race+0x2fcb) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Previous read of size 4 at 0x5641b0250078 by thread T1:
+    #0 siar /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:86 (s5_race+0x2724) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+    #1 layani /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:135 (s5_race+0x2afa) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Location is global 'daftar' of size 1664 at 0x5641b0250040 (s5_race+0x6078)
+
+  Thread T1 (tid=11144, running) created by main thread at:
+    #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1078 (libtsan.so.2+0x5cb02) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:222 (s5_race+0x3018) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+SUMMARY: ThreadSanitizer: data race /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:212 in main
+==================
+2026-11-04T04:11:14Z MASUK  127.0.0.1:32846 slot=1
+2026-11-04T04:11:14Z DAFTAR 127.0.0.1:32846 nama=u1 slot=1
+2026-11-04T04:11:14Z MASUK  127.0.0.1:32862 slot=2
+2026-11-04T04:11:14Z MASUK  127.0.0.1:32868 slot=3
+2026-11-04T04:11:14Z DAFTAR 127.0.0.1:32862 nama=u8 slot=2
+==================
+WARNING: ThreadSanitizer: data race (pid=11120)
+  Read of size 4 at 0x5641b02500dc by thread T3:
+    #0 siar /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:87 (s5_race+0x2702) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+    #1 layani /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:135 (s5_race+0x2afa) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Previous write of size 4 at 0x5641b02500dc by main thread:
+    #0 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:208 (s5_race+0x2f6a) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Location is global 'daftar' of size 1664 at 0x5641b0250040 (s5_race+0x60dc)
+
+  Thread T3 (tid=11159, running) created by main thread at:
+    #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1078 (libtsan.so.2+0x5cb02) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:222 (s5_race+0x3018) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+SUMMARY: ThreadSanitizer: data race /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:87 in siar
+==================
+==================
+WARNING: ThreadSanitizer: data race (pid=11120)
+  Read of size 8 at 0x72b0000000e0 by thread T3:
+    #0 send ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:6954 (libtsan.so.2+0x7c329) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 kirim_penuh /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:73 (s5_race+0x269b) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+    #2 siar /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:87 (s5_race+0x2710) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+    #3 layani /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:135 (s5_race+0x2afa) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Previous write of size 8 at 0x72b0000000e0 by main thread:
+    #0 accept ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:3182 (libtsan.so.2+0x6ae2d) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:193 (s5_race+0x3055) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Location is file descriptor 7 created by main thread at:
+    #0 accept ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:3182 (libtsan.so.2+0x6ae2d) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:193 (s5_race+0x3055) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Thread T3 (tid=11159, running) created by main thread at:
+    #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1078 (libtsan.so.2+0x5cb02) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:222 (s5_race+0x3018) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+SUMMARY: ThreadSanitizer: data race /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:73 in kirim_penuh
+==================
+2026-11-04T04:11:14Z DAFTAR 127.0.0.1:32868 nama=u5 slot=3
+2026-11-04T04:11:14Z MASUK  127.0.0.1:32874 slot=4
+==================
+WARNING: ThreadSanitizer: data race (pid=11120)
+  Write of size 4 at 0x5641b0250148 by main thread:
+2026-11-04T04:11:14Z DAFTAR 127.0.0.1:32874 nama=u2 slot=4
+    #0 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:212 (s5_race+0x2fcb) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Previous read of size 4 at 0x5641b0250148 by thread T2:
+    #0 siar /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:86 (s5_race+0x2724) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+    #1 layani /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:150 (s5_race+0x2c8c) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Location is global 'daftar' of size 1664 at 0x5641b0250040 (s5_race+0x6148)
+
+  Thread T2 (tid=11158, running) created by main thread at:
+    #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1078 (libtsan.so.2+0x5cb02) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:222 (s5_race+0x3018) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+SUMMARY: ThreadSanitizer: data race /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:212 in main
+==================
+2026-11-04T04:11:14Z MASUK  127.0.0.1:32890 slot=5
+2026-11-04T04:11:14Z MASUK  127.0.0.1:32902 slot=6
+2026-11-04T04:11:14Z MASUK  127.0.0.1:32904 slot=7
+2026-11-04T04:11:14Z DAFTAR 127.0.0.1:32890 nama=u6 slot=5
+2026-11-04T04:11:14Z DAFTAR 127.0.0.1:32902 nama=u3 slot=6
+2026-11-04T04:11:14Z DAFTAR 127.0.0.1:32904 nama=u7 slot=7
+==================
+WARNING: ThreadSanitizer: data race (pid=11120)
+  Read of size 8 at 0x72b0000000c0 by thread T1:
+    #0 send ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:6954 (libtsan.so.2+0x7c329) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 kirim_penuh /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:73 (s5_race+0x269b) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+    #2 siar /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:87 (s5_race+0x2710) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+    #3 layani /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:163 (s5_race+0x2d7c) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Previous write of size 8 at 0x72b0000000c0 by main thread:
+    #0 accept ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:3182 (libtsan.so.2+0x6ae2d) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:193 (s5_race+0x3055) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Location is file descriptor 6 created by main thread at:
+    #0 accept ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:3182 (libtsan.so.2+0x6ae2d) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:193 (s5_race+0x3055) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Thread T1 (tid=11144, running) created by main thread at:
+    #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1078 (libtsan.so.2+0x5cb02) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:222 (s5_race+0x3018) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+SUMMARY: ThreadSanitizer: data race /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:73 in kirim_penuh
+==================
+==================
+WARNING: ThreadSanitizer: data race (pid=11120)
+  Read of size 4 at 0x5641b0250144 by thread T1:
+    #0 siar /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:87 (s5_race+0x2702) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+    #1 layani /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:163 (s5_race+0x2d7c) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Previous write of size 4 at 0x5641b0250144 by main thread:
+    #0 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:208 (s5_race+0x2f6a) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Location is global 'daftar' of size 1664 at 0x5641b0250040 (s5_race+0x6144)
+
+  Thread T1 (tid=11144, running) created by main thread at:
+    #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1078 (libtsan.so.2+0x5cb02) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:222 (s5_race+0x3018) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+SUMMARY: ThreadSanitizer: data race /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:87 in siar
+==================
+2026-11-04T04:11:16Z KELUAR 127.0.0.1:32838 slot=0
+2026-11-04T04:11:16Z KELUAR 127.0.0.1:32846 slot=1
+==================
+WARNING: ThreadSanitizer: data race (pid=11120)
+  Write of size 8 at 0x72b000000080 by thread T1:
+    #0 close ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1928 (libtsan.so.2+0x5725f) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 layani /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:166 (s5_race+0x2cec) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Previous read of size 8 at 0x72b000000080 by thread T8:
+    #0 send ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:6954 (libtsan.so.2+0x7c329) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 kirim_penuh /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:73 (s5_race+0x269b) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+    #2 siar /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:87 (s5_race+0x2710) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+    #3 layani /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:150 (s5_race+0x2c8c) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Location is file descriptor 4 created by main thread at:
+    #0 accept ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:3182 (libtsan.so.2+0x6ae2d) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:193 (s5_race+0x3055) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Thread T1 (tid=11144, running) created by main thread at:
+    #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1078 (libtsan.so.2+0x5cb02) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:222 (s5_race+0x3018) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Thread T8 (tid=11164, running) created by main thread at:
+    #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1078 (libtsan.so.2+0x5cb02) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:222 (s5_race+0x3018) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+SUMMARY: ThreadSanitizer: data race /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:166 in layani
+==================
+==================
+WARNING: ThreadSanitizer: data race (pid=11120)
+  Write of size 4 at 0x5641b0250044 by thread T1:
+2026-11-04T04:11:16Z KELUAR 127.0.0.1:32862 slot=2
+2026-11-04T04:11:16Z KELUAR 127.0.0.1:32868 slot=3
+    #0 layani /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:168 (s5_race+0x2d06) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Previous read of size 4 at 0x5641b0250044 by thread T2:
+    #0 siar /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:86 (s5_race+0x2724) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+    #1 layani /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:163 (s5_race+0x2d7c) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Location is global 'daftar' of size 1664 at 0x5641b0250040 (s5_race+0x6044)
+
+  Thread T1 (tid=11144, running) created by main thread at:
+    #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1078 (libtsan.so.2+0x5cb02) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:222 (s5_race+0x3018) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+  Thread T2 (tid=11158, running) created by main thread at:
+    #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1078 (libtsan.so.2+0x5cb02) (BuildId: 66d37dc704b813df6c813b77217284deb43a0042)
+    #1 main /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:222 (s5_race+0x3018) (BuildId: 785f4b19e52c9d28cd0bb82db7ea0bb59f4dfd7f)
+
+SUMMARY: ThreadSanitizer: data race /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/s5_server_thread.c:168 in layani
+==================
+2026-11-04T04:11:16Z KELUAR 127.0.0.1:32874 slot=4
+2026-11-04T04:11:16Z KELUAR 127.0.0.1:32890 slot=5
+2026-11-04T04:11:16Z KELUAR 127.0.0.1:32902 slot=6
+2026-11-04T04:11:16Z KELUAR 127.0.0.1:32904 slot=7
