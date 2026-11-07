@@ -1,4 +1,0 @@
-[klien] handshake TLS GAGAL: unable to get local issuer certificate
-[klien] gagal pada SSL_connect
-[klien]   error:0A000086:SSL routines::certificate verify failed
-exit_code=1

@@ -1,7 +1,0 @@
-2026-11-04T07:19:31Z LISTEN 127.0.0.1:5090 maks_klien=64 maks_antrean=65536 rate=10/detik sndbuf=0
-2026-11-04T07:19:32Z MASUK  127.0.0.1:47942 total=1
-2026-11-04T07:19:32Z DAFTAR 127.0.0.1:47942 nama=budi
-2026-11-04T07:19:32Z MASUK  127.0.0.1:47956 total=2
-2026-11-04T07:19:32Z DAFTAR 127.0.0.1:47956 nama=siti
-2026-11-04T07:19:35Z KELUAR 127.0.0.1:47942 nama=budi alasan=penutupan terjadwal sisa_antrean=0
-2026-11-04T07:19:35Z KELUAR 127.0.0.1:47956 nama=siti alasan=penutupan terjadwal sisa_antrean=0

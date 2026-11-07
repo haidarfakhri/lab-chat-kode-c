@@ -1,9 +1,0 @@
-2026-11-04T04:12:53Z LISTEN 127.0.0.1:5444 TLS aktif crt=pki/server.crt maks_klien=64
-2026-11-04T04:12:54Z MASUK  127.0.0.1:48956 total=1 (menunggu handshake TLS)
-2026-11-04T04:12:54Z TLS-GAGAL 127.0.0.1:48956 kode=1
-2026-11-04T04:12:54Z TLSERR SSL_accept: error:0A000418:SSL routines::tlsv1 alert unknown ca
-2026-11-04T04:12:54Z KELUAR 127.0.0.1:48956 nama=- alasan=handshake gagal sisa_antrean=0
-2026-11-04T04:12:54Z MASUK  127.0.0.1:48962 total=1 (menunggu handshake TLS)
-2026-11-04T04:12:54Z TLS-OK 127.0.0.1:48962 versi=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384
-2026-11-04T04:12:54Z DAFTAR 127.0.0.1:48962 nama=budi
-2026-11-04T04:12:57Z KELUAR 127.0.0.1:48962 nama=budi alasan=baca TLS berakhir sisa_antrean=0

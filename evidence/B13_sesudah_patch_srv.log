@@ -1,8 +1,0 @@
-2026-11-05T02:16:50Z LISTEN 127.0.0.1:5083 maks_klien=64 maks_antrean=65536 rate=10/detik sndbuf=0
-2026-11-05T02:16:51Z MASUK  127.0.0.1:40904 total=1
-2026-11-05T02:16:51Z DAFTAR 127.0.0.1:40904 nama=korban
-2026-11-05T02:16:51Z MASUK  127.0.0.1:40918 total=2
-2026-11-05T02:16:51Z DAFTAR 127.0.0.1:40918 nama=penyerang
-2026-11-05T02:16:51Z SANITASI 127.0.0.1:40918 nama=penyerang karakter_kendali=2
-2026-11-05T02:16:52Z KELUAR 127.0.0.1:40918 nama=penyerang alasan=penutupan terjadwal sisa_antrean=0
-2026-11-05T02:16:55Z KELUAR 127.0.0.1:40904 nama=korban alasan=penutupan terjadwal sisa_antrean=0
