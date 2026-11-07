@@ -1,0 +1,37 @@
+--- s4_server_tangguh.c	2026-11-03 05:14:42.553614634 +0000
++++ s4_server_patched.c	2026-11-04 07:25:53.722154757 +0000
+@@ -276,7 +276,34 @@
+         return 1;
+     }
+ 
++    size_t jml_kendali = 0;
++
++    for (size_t k = 0; baris[k] != '\0'; k++) {
++
++        unsigned char c = (unsigned char)baris[k];
++
++        if (c < 32 || c == 127) {
++
++            baris[k] = '?';
++
++            jml_kendali++;
++
++        }
++
++    }
++
++    if (jml_kendali > 0) {
++
++        catat("SANITASI %s nama=%s karakter_kendali=%zu",
++
++              klien[i].asal, klien[i].nama, jml_kendali);
++
++    }
++
++
++
+     snprintf(keluar, sizeof keluar, "[%s] %s\n", klien[i].nama, baris);
++
+     siar(i, keluar);
+     return 1;
+ }

@@ -1,0 +1,13 @@
+2026-11-04T04:12:09Z LISTEN 127.0.0.1:5443 TLS aktif crt=pki/server.crt maks_klien=64
+2026-11-04T04:12:10Z MASUK  127.0.0.1:33314 total=1 (menunggu handshake TLS)
+2026-11-04T04:12:10Z TLS-OK 127.0.0.1:33314 versi=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384
+2026-11-04T04:12:10Z DAFTAR 127.0.0.1:33314 nama=budi
+2026-11-04T04:12:10Z MASUK  127.0.0.1:33322 total=2 (menunggu handshake TLS)
+2026-11-04T04:12:10Z TLS-OK 127.0.0.1:33322 versi=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384
+2026-11-04T04:12:10Z DAFTAR 127.0.0.1:33322 nama=siti
+2026-11-04T04:12:11Z MASUK  127.0.0.1:33338 total=3 (menunggu handshake TLS)
+2026-11-04T04:12:11Z TLS-OK 127.0.0.1:33338 versi=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384
+2026-11-04T04:12:11Z DAFTAR 127.0.0.1:33338 nama=agus
+2026-11-04T04:12:13Z KELUAR 127.0.0.1:33338 nama=agus alasan=penutupan terjadwal sisa_antrean=0
+2026-11-04T04:12:16Z KELUAR 127.0.0.1:33314 nama=budi alasan=baca TLS berakhir sisa_antrean=0
+2026-11-04T04:12:16Z KELUAR 127.0.0.1:33322 nama=siti alasan=baca TLS berakhir sisa_antrean=0

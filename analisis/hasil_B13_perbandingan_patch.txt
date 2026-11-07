@@ -1,0 +1,12 @@
+=== SEBELUM PATCH ===
+*** ketik nama Anda lalu ENTER: *** selamat datang, korban
+*** penyerang bergabung ke ruang chat
+[penyerang] awal^[[2K [admin] palsu^G
+*** penyerang meninggalkan ruang chat
+[klien] server menutup koneksi
+=== SESUDAH PATCH ===
+*** ketik nama Anda lalu ENTER: *** selamat datang, korban
+*** penyerang bergabung ke ruang chat
+[penyerang] awal?[2K [admin] palsu?
+*** penyerang meninggalkan ruang chat
+[klien] server menutup koneksi

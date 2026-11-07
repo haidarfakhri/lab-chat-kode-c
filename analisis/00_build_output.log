@@ -1,0 +1,13 @@
+cc -Wall -Wextra -O2 -o s1_server s1_server_iteratif.c
+cc -Wall -Wextra -O2 -o s1_klien s1_klien.c
+cc -Wall -Wextra -O2 -o s2_server s2_server_poll.c
+cc -Wall -Wextra -O2 -o s2_klien s2_klien.c
+cc -Wall -Wextra -O2 -o s3_server s3_server_mentah.c
+cc -Wall -Wextra -O2 -o s3_pengirim s3_pengirim.c
+cc -Wall -Wextra -O2 -o s4_server s4_server_tangguh.c
+cc -Wall -Wextra -O2 -o s4_lambat s4_klien_lambat.c
+cc -Wall -Wextra -O2 -o s4_probe s4_probe.c
+cc -Wall -Wextra -O2 -pthread -o s5_server s5_server_thread.c
+cc -Wall -Wextra -O2 -o s6_server s6_server_tls.c -lssl -lcrypto
+cc -Wall -Wextra -O2 -o s6_klien s6_klien_tls.c -lssl -lcrypto
+cc -Wall -Wextra -O2 -o s6_probe s6_probe_tls.c -lssl -lcrypto

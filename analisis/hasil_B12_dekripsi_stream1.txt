@@ -1,0 +1,27 @@
+
+===================================================================
+Follow: tls,ascii
+Filter: tls.stream eq 1
+Node 0: 127.0.0.1:5445
+Node 1: 127.0.0.1:53796
+	5
+siti
+
+32
+*** ketik nama Anda lalu ENTER: 
+25
+*** selamat datang, siti
+
+35
+[budi] rahasia-rapat-anggaran-2026
+
+	9
+diterima
+
+33
+*** budi meninggalkan ruang chat
+
+	6
+/quit
+
+===================================================================

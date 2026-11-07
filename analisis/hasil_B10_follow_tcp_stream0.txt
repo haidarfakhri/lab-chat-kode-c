@@ -1,0 +1,27 @@
+
+===================================================================
+Follow: tcp,ascii
+Filter: tcp.stream eq 0
+Node 0: 127.0.0.1:45372
+Node 1: 127.0.0.1:5090
+5
+budi
+
+	32
+*** ketik nama Anda lalu ENTER: 
+	25
+*** selamat datang, budi
+
+	33
+*** siti bergabung ke ruang chat
+
+28
+rahasia-rapat-anggaran-2026
+
+	16
+[siti] diterima
+
+6
+/quit
+
+===================================================================

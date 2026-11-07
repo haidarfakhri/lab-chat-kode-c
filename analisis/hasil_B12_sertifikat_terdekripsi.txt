@@ -1,0 +1,7 @@
+--- Summary Pesan Certificate Terdekripsi ---
+    6   0.005547    127.0.0.1 → 127.0.0.1    TLSv1.3 2639 Server Hello, Change Cipher Spec, Encrypted Extensions, Certificate, Certificate Verify, Finished
+   20   0.315907    127.0.0.1 → 127.0.0.1    TLSv1.3 2639 Server Hello, Change Cipher Spec, Encrypted Extensions, Certificate, Certificate Verify, Finished
+--- Detail Subjek & SAN Sertifikat ---
+frame.number	tls.handshake.type	x509sat.uTF8String	x509ce.dNSName
+6	2,8,11,15,20	Lab Kamsiber PENS,CA Lab Chat,Lab Kamsiber PENS,localhost	localhost
+20	2,8,11,15,20	Lab Kamsiber PENS,CA Lab Chat,Lab Kamsiber PENS,localhost	localhost

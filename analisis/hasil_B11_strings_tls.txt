@@ -1,0 +1,2 @@
+run1_hits=0
+run2_hits=0

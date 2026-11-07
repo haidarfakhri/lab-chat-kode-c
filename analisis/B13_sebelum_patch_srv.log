@@ -1,0 +1,7 @@
+2026-11-05T02:16:44Z LISTEN 127.0.0.1:5082 maks_klien=64 maks_antrean=65536 rate=10/detik sndbuf=0
+2026-11-05T02:16:45Z MASUK  127.0.0.1:54674 total=1
+2026-11-05T02:16:45Z DAFTAR 127.0.0.1:54674 nama=korban
+2026-11-05T02:16:45Z MASUK  127.0.0.1:54678 total=2
+2026-11-05T02:16:45Z DAFTAR 127.0.0.1:54678 nama=penyerang
+2026-11-05T02:16:46Z KELUAR 127.0.0.1:54678 nama=penyerang alasan=penutupan terjadwal sisa_antrean=0
+2026-11-05T02:16:49Z KELUAR 127.0.0.1:54674 nama=korban alasan=penutupan terjadwal sisa_antrean=0

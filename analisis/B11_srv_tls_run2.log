@@ -1,0 +1,10 @@
+2026-11-04T09:11:24Z KEYLOG aktif ke /home/haidar/Advanced_Network_Concept/kode_lab_chat_c_1/evidence/B12_kunci_sesi_run2.log -- HANYA UNTUK LAB
+2026-11-04T09:11:24Z LISTEN 127.0.0.1:5445 TLS aktif crt=pki/server.crt maks_klien=64
+2026-11-04T09:11:24Z MASUK  127.0.0.1:58458 total=1 (menunggu handshake TLS)
+2026-11-04T09:11:24Z TLS-OK 127.0.0.1:58458 versi=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384
+2026-11-04T09:11:24Z DAFTAR 127.0.0.1:58458 nama=budi
+2026-11-04T09:11:25Z MASUK  127.0.0.1:58466 total=2 (menunggu handshake TLS)
+2026-11-04T09:11:25Z TLS-OK 127.0.0.1:58466 versi=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384
+2026-11-04T09:11:25Z DAFTAR 127.0.0.1:58466 nama=siti
+2026-11-04T09:11:27Z KELUAR 127.0.0.1:58458 nama=budi alasan=penutupan terjadwal sisa_antrean=0
+2026-11-04T09:11:28Z KELUAR 127.0.0.1:58466 nama=siti alasan=penutupan terjadwal sisa_antrean=0
