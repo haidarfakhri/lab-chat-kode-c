@@ -1,0 +1,6 @@
+[A +   0.3 ms] connect() sukses
+[A +   0.5 ms] kirim   : A-1
+[A +   1.9 ms] balasan : A-1
+[A +4008.2 ms] kirim   : A-2
+[A +4008.5 ms] balasan : A-2
+[A +4008.5 ms] selesai
